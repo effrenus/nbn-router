@@ -53,7 +53,7 @@ a
 			background-color: darken(#EC6608, 5%)
 
 .wrap_fixed-width
-	width: $width
+	max-width: $width
 	margin: 0 auto
 
 .wrap_rel
@@ -63,7 +63,7 @@ a
 	position: relative
 	padding: 35px 0 0
 	box-sizing: border-box
-	background-image: linear-gradient(180deg, #E94E06 0, #EF7909 50%, #F4970B 90%, #F2860A 100%);
+	background-image: linear-gradient(to bottom, #e74d06, #eb6008 29%, #f38c0b 77%, #f4900b 92%, #f1840a 97%, #f1840a)
 	color: #FFF
 	text-align: center
 	box-shadow: 0 4px 4px transparentize(#000, 0.7)
@@ -151,20 +151,26 @@ a
 			left: 0
 			top: 0
 
-	&__safety:before
-		top: -3px
-		@include sprite($safe)
+		&_safety:before
+			top: -3px
+			@include sprite($safe)
 
-	&__speed:before
-		@include sprite($speed)
+		&_speed:before
+			@include sprite($speed)
 
-	&__usb:before
-		left: 15px
-		@include sprite($usb)
+		&_usb
+			padding-top: 12px
 
-	&__sales:before
-		left: -10px
-		@include sprite($guest)
+			&:before
+				left: 15px
+				@include sprite($usb)
+
+		&_sales
+			padding-top: 12px
+
+			&:before
+				left: -10px
+				@include sprite($guest)
 
 .price-choose
 	margin-top: 20px
@@ -231,6 +237,7 @@ a
 		border: 1px solid #949291
 		background-color: #FFF
 		border-radius: 3px
+		box-sizing: border-box
 		box-shadow: 0 3px 1px transparentize(#000, 0.8)
 
 		h1
@@ -239,10 +246,15 @@ a
 			color: #EC6608
 
 	&__list
-		width: 730px
+		width: 67%
+		margin-right: 10px
+		padding-left: 25px
+
+		h1
+			margin-bottom: 40px
 
 	&__presonal
-		width: 350px
+		width: 33%
 
 .checkout
 
@@ -356,7 +368,7 @@ a
 
 	&__block
 		position: relative
-		height: 145px
+		min-height: 150px
 		margin-right: 20px
 		padding: 15px 20px
 		box-sizing: border-box
@@ -517,13 +529,13 @@ a
 	&__next
 		position: absolute
 		right: 0
-		top: 35%
+		top: 38%
 		@include sprite($arr-r)
 		cursor: pointer
 
 	&__prev
 		position: absolute
 		left: 0
-		top: 35%
+		top: 38%
 		@include sprite($arr-l)
 		cursor: pointer
