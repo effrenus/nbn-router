@@ -6,7 +6,7 @@ gulp.task('spritesmith', (cb) => {
 	let spriteData = gulp.src('./app/images/sprite/*.png').pipe(spritesmith({
 		imgName: 'sprite.png',
 		cssName: 'sprite.sass',
-		imgPath: '/images/sprite.png'
+		imgPath: '../images/sprite.png'
 	}));
 
 	let imgStream = spriteData.img
