@@ -199,24 +199,24 @@ a {
       top: 0; }
   .merits__safety:before {
     top: -3px;
-    background-image: url(/images/sprite.png);
+    background-image: url(../images/sprite.png);
     background-position: -150px -44px;
     width: 35px;
     height: 44px; }
   .merits__speed:before {
-    background-image: url(/images/sprite.png);
+    background-image: url(../images/sprite.png);
     background-position: -150px 0px;
     width: 43px;
     height: 44px; }
   .merits__usb:before {
     left: 15px;
-    background-image: url(/images/sprite.png);
+    background-image: url(../images/sprite.png);
     background-position: -150px -88px;
     width: 28px;
     height: 43px; }
   .merits__sales:before {
     left: -10px;
-    background-image: url(/images/sprite.png);
+    background-image: url(../images/sprite.png);
     background-position: -64px -69px;
     width: 53px;
     height: 50px; }
@@ -248,7 +248,7 @@ a {
       position: absolute;
       left: 23px;
       top: 18px;
-      background-image: url(/images/sprite.png);
+      background-image: url(../images/sprite.png);
       background-position: -22px -133px;
       width: 18px;
       height: 21px; }
@@ -411,13 +411,13 @@ a {
       bottom: 3px;
       display: inline-block; }
     .services__category_option span:before {
-      background-image: url(/images/sprite.png);
+      background-image: url(../images/sprite.png);
       background-position: -40px -133px;
       width: 18px;
       height: 17px; }
     .services__category_service span:before {
       bottom: 5px;
-      background-image: url(/images/sprite.png);
+      background-image: url(../images/sprite.png);
       background-position: -178px -88px;
       width: 14px;
       height: 16px; }
@@ -488,17 +488,17 @@ a {
       left: 0;
       top: 0; }
   .services__item.parent .services__text:before {
-    background-image: url(/images/sprite.png);
+    background-image: url(../images/sprite.png);
     background-position: 0px 0px;
     width: 76px;
     height: 69px; }
   .services__item.whatsapp .services__text:before {
-    background-image: url(/images/sprite.png);
+    background-image: url(../images/sprite.png);
     background-position: 0px -69px;
     width: 64px;
     height: 64px; }
   .services__item.antivirus .services__text:before {
-    background-image: url(/images/sprite.png);
+    background-image: url(../images/sprite.png);
     background-position: -76px 0px;
     width: 74px;
     height: 64px; }
@@ -538,7 +538,7 @@ a {
     position: absolute;
     right: 0;
     top: 35%;
-    background-image: url(/images/sprite.png);
+    background-image: url(../images/sprite.png);
     background-position: 0px -133px;
     width: 22px;
     height: 39px;
@@ -547,7 +547,7 @@ a {
     position: absolute;
     left: 0;
     top: 35%;
-    background-image: url(/images/sprite.png);
+    background-image: url(../images/sprite.png);
     background-position: -117px -69px;
     width: 23px;
     height: 39px;
