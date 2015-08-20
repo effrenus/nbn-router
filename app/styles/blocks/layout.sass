@@ -1,0 +1,529 @@
+$pattern-color: transparentize(#FFF, 0.6) transparentize(#FFF, 0.9)
+$pattern-color2: transparentize(#000, 0.96) transparentize(#000, 1)
+
+body
+	padding-top: 185px
+	font-family: $default-font
+	background-image: linear-gradient(-45deg, nth($pattern-color, 1) 25%, transparent 25%, transparent 75%, nth($pattern-color, 1) 75%), linear-gradient(-45deg, nth($pattern-color, 1) 25%, transparent 25%, transparent 75%, nth($pattern-color, 1) 75%), linear-gradient(45deg, nth($pattern-color, 2) 25%, transparent 25%, transparent 75%, nth($pattern-color, 2) 75%), linear-gradient(45deg, nth($pattern-color, 2) 25%, transparent 25%, transparent 75%, nth($pattern-color, 2) 75%)
+	background-size: 4px 4px
+	background-position: 0 0, 2px 2px, 0 0, 2px 2px
+	background-color: #E1DDDB
+	color: #3F3F3F
+
+a
+	color: #404040
+
+	&:hover
+		text-decoration: none
+
+.btn
+	background: none
+	border: 0
+	color: #FFF
+	border-radius: 3px
+	cursor: pointer
+	outline: none
+
+	&_aqua
+		width: 130px
+		padding: 7px
+		border: 1px solid #00ABAB
+		background-color: #00CCCC
+		box-shadow: inset 0 1px 1px #FFF, 0 1px 1px rgba(0, 0, 0, 0.3)
+		font-size: 1.2rem
+
+		&:hover
+			background-color: lighten(#00CCCC, 5%)
+
+		&:active
+			background-color: darken(#00CCCC, 5%)
+
+	&_primary
+		width: 130px
+		padding: 7px
+		border: 1px solid #EA4F0B
+		background-color: #EC6608
+		box-shadow: inset 0 1px 1px #FFF, 0 1px 1px rgba(0, 0, 0, 0.3)
+		font-size: 1.2rem
+
+		&:hover
+			background-color: lighten(#EC6608, 5%)
+
+		&:active
+			background-color: darken(#EC6608, 5%)
+
+.wrap_fixed-width
+	width: $width
+	margin: 0 auto
+
+.wrap_rel
+	position: relative
+
+.sale-strip
+	position: relative
+	padding: 35px 0 0
+	box-sizing: border-box
+	background-image: linear-gradient(180deg, #E94E06 0, #EF7909 50%, #F4970B 90%, #F2860A 100%);
+	color: #FFF
+	text-align: center
+	box-shadow: 0 4px 4px transparentize(#000, 0.7)
+
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		background-image: linear-gradient(-45deg, nth($pattern-color2, 1) 25%, transparent 25%, transparent 75%, nth($pattern-color2, 1) 75%), linear-gradient(-45deg, nth($pattern-color2, 1) 25%, transparent 25%, transparent 75%, nth($pattern-color2, 1) 75%), linear-gradient(45deg, nth($pattern-color2, 2) 25%, transparent 25%, transparent 75%, nth($pattern-color2, 2) 75%), linear-gradient(45deg, nth($pattern-color2, 2) 25%, transparent 25%, transparent 75%, nth($pattern-color2, 2) 75%)
+		background-position: 0 0, 2px 2px, 0 0, 2px 2px
+		background-size: 4px 4px
+
+.section
+	margin-bottom: 30px
+
+	&__title
+		margin-bottom: 25px
+		font-size: 2.2rem
+		text-align: center
+		color: #404040
+
+	&__undertitle
+		display: block
+		font-size: 0.8rem
+
+	&__content
+
+		&_hidden
+			overflow: hidden
+
+	&__stitle
+		margin-bottom: 0.5em
+		font-size: 1.45rem
+
+	&__description
+		line-height: 1.33
+
+		p
+			margin-bottom: 15px
+
+.sale-block
+	display: flex
+	justify-content: space-between
+	width: 960px
+	margin: 40px auto 0 auto
+	text-align: left
+
+	a
+		color: #FFF
+
+	&__gallery
+		width: 500px
+
+	&__content
+		width: 480px
+		padding-top: 40px
+
+	&__title
+		margin-bottom: 1em
+		font-size: 2.4rem
+		text-shadow: 0 2px 1px rgba(0, 0, 0, 0.15)
+
+	&__link
+		font-size: 0.9rem
+
+.merits
+	margin-bottom: 20px
+
+	&__item
+		position: relative
+		display: inline-block
+		width: 45%
+		margin-bottom: 20px
+		padding-left: 50px
+		box-sizing: border-box
+		line-height: 1.35
+		vertical-align: top
+
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+
+	&__safety:before
+		top: -3px
+		@include sprite($safe)
+
+	&__speed:before
+		@include sprite($speed)
+
+	&__usb:before
+		left: 15px
+		@include sprite($usb)
+
+	&__sales:before
+		left: -10px
+		@include sprite($guest)
+
+.price-choose
+	margin-top: 20px
+	text-align: right
+
+	label
+		position: relative
+		display: inline-block
+		margin: 0 10px 20px 0
+		padding: 10px 10px 10px 70px
+		text-align: left
+		cursor: pointer
+
+		&:before
+			content: ''
+			position: absolute
+			left: 20px
+			top: 15px
+			width: 30px
+			height: 27px
+			background-image: linear-gradient(180deg, #BA4905 0, #E46920 100%)
+			border-radius: 2px
+			box-shadow: inset 0 2px 6px #000, 0 1px 1px #FFF
+
+	& input:checked+label
+		background-color: rgba(255, 255, 255, 0.1)
+
+		&:after
+			content: ''
+			position: absolute
+			left: 23px
+			top: 18px
+			@include sprite($check)
+
+	&__sum
+		display: block
+		font-size: 1rem
+		text-shadow: $text-shadow
+
+		b
+			font-size: 2.4rem
+
+	&__link
+		opacity: 0.8
+		font-size: 0.7rem
+
+	&__btn
+		display: block
+		margin: 0 0 0 auto
+
+	input
+		position: absolute
+		visibility: hidden
+
+.application
+	display: flex
+	justify-content: space-between
+	margin-bottom: 100px
+
+	&__list,
+	&__presonal
+		box-sizing: border-box
+		padding: 15px
+		border: 1px solid #949291
+		background-color: #FFF
+		border-radius: 3px
+		box-shadow: 0 3px 1px transparentize(#000, 0.8)
+
+		h1
+			margin-bottom: 0.5em
+			font-size: 1.5rem
+			color: #EC6608
+
+	&__list
+		width: 730px
+
+	&__presonal
+		width: 350px
+
+.checkout
+
+	&__total
+		text-align: right
+		color: #EC6608
+		font-weight: bold
+		font-size: 1.5rem
+
+	&__text
+		margin-bottom: 1rem
+		padding-top: 15px
+		border-top: 1px solid #CCC
+		font-size: 0.8rem
+
+	&__button
+		width: 100%
+
+	&__field
+		position: relative
+		margin-bottom: 20px
+
+		&:last-of-type
+			margin-bottom: 30px
+
+	&__input
+		width: 100%
+		padding: 18px 0 7px 25px
+		box-sizing: border-box
+		border: 0
+		border-radius: 4px
+		background-color: #E5E1DF
+		box-shadow: inset 0 2px 1px transparentize(#000, 0.8)
+		font-size: 1.3rem
+		font-family: $default-font
+		color: #565555
+
+		&:empty+label
+			position: absolute
+			left: 25px
+			top: 6px
+			display: none
+			color: #919191
+			font-size: 0.7rem
+
+		&:valid+label
+			display: block
+
+
+.env-list
+	margin-bottom: 30px
+	padding: 8px 0 0
+	border: 1px solid #DFDFDF
+	border-width: 1px 0
+
+	&__title
+		margin-bottom: 10px
+		font-size: 0.9rem
+		font-weight: bold
+		color: #EC6608
+
+	&__table
+		margin-bottom: 30px
+
+		&:last-of-type
+			margin-bottom: 0
+
+		td, th
+			color: #404040
+
+		th
+			text-align: left
+			font-size: 0.7rem
+
+		td
+			padding: 7px 0
+			font-size: 1.1rem
+
+			&:nth-child(1)
+				width: 300px
+			&:nth-child(2)
+				width: 200px
+
+.services
+	position: relative
+	display: flex
+	justify-content: space-between
+	margin-top: 10px
+
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		right: 100%
+		top: 12px
+		width: 3000px
+		height: 1px
+		background-color: #B5B5B5
+		font-size: 0
+		line-height: 0
+
+	&:after
+		right: auto
+		left: 100%
+		margin-left: -1px
+
+	&__item
+		overflow: hidden
+		width: 33.3333%
+		padding: 40px 0 10px 0
+
+	&__block
+		position: relative
+		height: 145px
+		margin-right: 20px
+		padding: 15px 20px
+		box-sizing: border-box
+		border: 1px solid #949291
+		background-color: #FFF
+		box-shadow: 0 3px 1px transparentize(#000, 0.8)
+
+	&__category
+		position: absolute
+		top: -40px
+		left: -1px
+		padding: 10px 30px 4px 15px
+		border: 1px solid #B1B1B0
+		box-sizing: border-box
+		border-bottom: 0
+		border-radius: 2px
+		font-size: 0.9rem
+
+		span
+			margin-left: 10px
+
+		span:before
+			content: ''
+			position: absolute
+			left: 5px
+			bottom: 3px
+			display: inline-block
+
+		&_option span:before
+			@include sprite($cat_option)
+
+		&_service span:before
+			bottom: 5px
+			@include sprite($cat_service)
+
+
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			bottom: 1px
+			width: 9px
+			height: 1px
+			background-color: #B5B5B5
+			font-size: 0
+			line-height: 0
+
+		&:before
+			content: ''
+			position: absolute
+			left: 100%
+			top: 10px
+			width: 1000px
+			height: 1px
+			background-color: #B5B5B5
+			font-size: 0
+			line-height: 0
+
+		i
+			position: absolute
+			left: 0
+			bottom: -8px
+			width: 100%
+			height: 10px
+			overflow: hidden
+			font-size: 0
+			line-height: 0
+
+			&:before
+				content: ''
+				position: absolute
+				left: 26px
+				right: -1px
+				bottom: 9px
+				height: 10px
+				border: 1px solid #B1B1B0
+				font-size: 0
+				line-height: 0
+
+			&:after
+				content: ''
+				position: absolute
+				left: 10px
+				bottom: 3px
+				width: 15px
+				height: 15px
+				box-sizing: border-box
+				border: 1px solid #B5B5B5
+				transform: rotate(45deg)
+
+	&__title
+		display: block
+		margin-bottom: 15px
+		font-weight: bold
+		font-size: 1.2rem
+		color: #404040
+
+	&__text
+		position: relative
+		min-height: 70px
+		padding-left: 90px
+		font-size: 0.85rem
+		line-height: 1.2
+
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+
+	&__item.parent &__text:before
+		@include sprite($parents)
+
+	&__item.whatsapp &__text:before
+		@include sprite($whatsup)
+
+	&__item.antivirus &__text:before
+		@include sprite($antivirus)
+
+.gallery
+	position: relative
+	width: 400px
+
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0px
+		left: -50px
+		width: 534px
+		height: 181px
+		background: url(../images/blur.png) 50% 100% no-repeat
+
+	&__images
+		position: relative
+		height: 450px
+		margin: 0 25px
+
+	&__image
+		position: absolute
+		width: 100%
+		top: 0
+		left: 0
+		opacity: 0
+		text-align: center
+		transform: translate(100%)
+		transition: transform 0.9s, opacity 0.5s
+
+		&.current
+			opacity: 1
+			transform: translate(0)
+
+		&.next
+			transform: translate(80%)
+
+		&.prev
+			transform: translate(-80%)
+
+	&__next
+		position: absolute
+		right: 0
+		top: 35%
+		@include sprite($arr-r)
+		cursor: pointer
+
+	&__prev
+		position: absolute
+		left: 0
+		top: 35%
+		@include sprite($arr-l)
+		cursor: pointer

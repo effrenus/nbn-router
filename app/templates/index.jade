@@ -1,0 +1,117 @@
+extends ./layouts/default
+
+block head
+	- pageTitle = 'Роутер Speed Power X5'
+
+block content
+	section.section
+
+		header.section__title Оборудование
+
+		article.section__content.sale-strip: .wrap_fixed-width.wrap_rel
+			h2.section__stitle Распаковали - и сразу же онлайн
+			.section__description
+				p.
+					На настройку Wi-Fi и подключение к интернету с экспертами Wirefire вы потратите меньше<br> времени и усилий, чем на приготовление чашки кофе. Это
+					возможно благодаря высокому<br> уровню обслуживания наших абонентов. Все что Вам нужно - это выбрать роутер.
+				p.
+					Никаких сложных настроек и непонятной терминологии. Expert Wifire сделает всю работу за вас.
+
+			.sale-block
+				.sale-block__gallery
+					#gallery.gallery
+				.sale-block__content
+					h2.sale-block__title Роутер Speed Power X5
+
+					ul.merits
+						li.merits__item.merits__safety Безопасное<br> соединение
+						li.merits__item.merits__speed Скорость<br> 300Мбит/с
+						li.merits__item.merits__sales Sales point
+						li.merits__item.merits__usb USB-порт
+
+					p.sale-block__link: a(href="http://netbynet.ru/") Подробнее об устройстве
+
+					.price-choose
+						input(type='radio' id='payment-option_rent' name='payment-option' value='1')
+						label(for='payment-option_rent')
+							span.price-choose__sum <b>70</b> руб/мес
+							a.price-choose__link(href='/') Аренда роутера
+
+						input(type='radio' id='payment-option_router' name='payment-option' value='2')
+						label(for='payment-option_router')
+							span.price-choose__sum <b>4000</b> руб
+							a.price-choose__link(href='/') Покупка роутера
+
+						button.btn.btn_aqua.price-choose__btn.
+							Далее
+
+	section.section
+
+		header.section__title Отправьте заявку
+
+		div.section__content.wrap_fixed-width.application
+
+			section.application__list
+				h1 Вы выбрали
+
+				section.env-list
+					h2.env-list__title Оборудование
+					table(cellspacing=0 cellpadding=0 width='100%').env-list__table
+						tr
+							th наименование роутера
+							th способ оплаты
+							th абонентская плата
+						tr
+							td Speed Power X5
+							td Аренда
+							td 70 руб/мес
+
+				.checkout__total.
+					Итого к оплате: 870 руб
+
+			section.application__presonal
+				h1 Заявка на подключение
+
+				form(action='.' method='POST').checkout__form
+					p.checkout__text Укажите ваш номер телефона, и наши эксперты Вам быстро перезвонят.
+					.checkout__field
+						input(type='text' required=true placeholder='Ваш телефон').checkout__input
+						label Ваш телефон
+					.checkout__field
+						input(type='text' required=true placeholder='Ваше имя').checkout__input
+						label Ваше имя
+					button.btn.btn_primary.checkout__button Отправить
+
+	section.section
+
+		header.section__title
+			| Дополнительные услуги
+			a(href='/').section__undertitle Все услуги
+
+		div.section__content.section__content_hidden: .wrap_fixed-width
+			ul.services
+				li.services__item.antivirus
+					.services__block
+						.services__category.services__category_service
+							| <span>Услуга</span>
+							i
+						a(href='/').services__title Антивирус
+						.services__text Пусть Ваш компьютер будет готов к опасности! Kaspersky Internet Security для всх устройств
+
+				li.services__item.whatsapp
+					.services__block
+						.services__category.services__category_option
+							| <span>Опция</span>
+							i
+						a(href='/').services__title Whatsapp
+						.services__text Играй онлайн на любом компьютере в игры без скачивания и установок.
+
+				li.services__item.parent
+					.services__block
+						.services__category.services__category_service
+							| <span>Услуга</span>
+							i
+						a(href='/').services__title Родительский контроль
+						.services__text Защитит вас и ваших детей от негативной информации в сети! Блокировка опасного интернет-контента с возможностью настройки профилей.
+
+	script(src='./scripts/bundle.js')
